@@ -59,12 +59,14 @@ export function SiteHeader() {
           <IconBtn label="Sepet" onClick={() => setCartOpen(true)} count={cart.length}>
             <ShoppingBag className="h-5 w-5" />
           </IconBtn>
-          <span
-            title="Yakında"
-            className="ml-2 hidden cursor-not-allowed items-center gap-2 rounded-full border border-blush-deep px-4 py-2 text-xs font-medium tracking-wide opacity-50 sm:inline-flex"
+          <Link
+            to="/admin"
+            aria-label="Yönetici paneli"
+            className="ml-1 inline-flex items-center gap-2 rounded-full border border-blush-deep px-3 py-2 text-xs font-medium tracking-wide transition hover:border-gold hover:bg-blush sm:ml-2 sm:px-4"
           >
-            <LayoutDashboard className="h-4 w-4" /> Yönetici Paneli
-          </span>
+            <LayoutDashboard className="h-4 w-4" />
+            <span className="hidden sm:inline">Yönetim</span>
+          </Link>
         </div>
       </div>
 
