@@ -95,7 +95,7 @@ export function Catalog() {
             </div>
           </FilterGroup>
           <FilterGroup title={`Adet Fiyatı · en fazla ${formatTL(maxPrice)}`}>
-            <Slider value={[maxPrice]} min={10} max={MAX_PRICE} step={1} onValueChange={(v) => setMaxPrice(v[0])} />
+            <Slider value={[maxPrice]} min={10} max={MAX_PRICE} step={1} onValueChange={(v) => setMaxPrice(v[0] ?? MAX_PRICE)} />
           </FilterGroup>
           <FilterGroup title="Kâğıt Türü">
             {PAPER_TYPES.map((p) => (
