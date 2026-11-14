@@ -11,7 +11,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { useStore } from "@/lib/store";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -40,9 +39,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -77,17 +73,14 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    // Replace these placeholders with the app's name and description when first building the app.
-    // Each content route, / included, must still set its own head(). Never add og:image or
-    // twitter:image here: every page without its own would inherit the root's preview image.
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Koala Davetiye | Ankara Davetiye" },
-      { name: "description", content: "Kaliteli, şık ve güvenli online davetiye mağazası." },
-      { name: "author", content: "Koala Davetiye" },
-      { property: "og:title", content: "Koala Davetiye" },
-      { property: "og:description", content: "Kaliteli, şık ve güvenli online davetiye mağazası." },
+      { title: "Mühür Dijital Davetiye — Düğün, Nişan & Özel Gün" },
+      { name: "description", content: "Düğün, nişan ve özel günler için kurgusal dijital davetiye demo vitrini." },
+      { name: "author", content: "Mühür Dijital Davetiye" },
+      { property: "og:title", content: "Mühür Dijital Davetiye — Düğün, Nişan & Özel Gün" },
+      { property: "og:description", content: "Düğün, nişan ve özel günler için kurgusal dijital davetiye örnekleri." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

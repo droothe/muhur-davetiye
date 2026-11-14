@@ -37,8 +37,8 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Yönetim Paneli | Koala Davetiye" },
-      { name: "description", content: "Koala Davetiye sipariş ve ürün yönetim paneli." },
+      { title: "Yönetim Paneli | Mühür Dijital Davetiye" },
+      { name: "description", content: "Mühür Dijital Davetiye demo sipariş ve ürün yönetim paneli." },
     ],
   }),
   component: AdminPage,
@@ -118,7 +118,7 @@ function AdminPage() {
     event.preventDefault();
     const product: Product = {
       ...productForm,
-      id: editingProduct?.id ?? `koala-${crypto.randomUUID()}`,
+      id: editingProduct?.id ?? `muhur-${crypto.randomUUID()}`,
       basePrice: Number(productForm.basePrice),
     };
     upsertProduct(product);
@@ -148,7 +148,7 @@ function AdminPage() {
               <ArrowLeft className="h-4 w-4" />
             </Link>
             <div className="leading-none">
-              <span className="block font-serif text-xl tracking-[0.18em]">KOALA</span>
+              <span className="block font-serif text-xl tracking-[0.12em]">MÜHÜR</span>
               <span className="mt-1 block text-[9px] tracking-[0.38em] text-gold">YÖNETİM</span>
             </div>
           </div>
@@ -211,7 +211,7 @@ function AdminPage() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="eyebrow">
-                {tab === "Genel Bakış" ? "MAĞAZA ÖZETİ" : "KOALA DAVETİYE"}
+                {tab === "Genel Bakış" ? "DEMO MAĞAZA ÖZETİ" : "MÜHÜR DİJİTAL DAVETİYE"}
               </p>
               <h2 className="mt-1 font-serif text-3xl">{tab}</h2>
             </div>
@@ -484,7 +484,7 @@ function AdminPage() {
       </Dialog>
 
       <footer className="border-t py-5 text-center text-xs text-muted-foreground">
-        Koala Davetiye · Yönetim alanı
+        Mühür Dijital Davetiye · Demo yönetim alanı
       </footer>
     </main>
   );

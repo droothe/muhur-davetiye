@@ -49,8 +49,8 @@ export const IMAGE_LIBRARY: { label: string; src: string }[] = [
 
 export const SEED_PRODUCTS: Product[] = [
   {
-    id: "hera-pudra",
-    title: "Hera Pudra Cepli Davetiye",
+    id: "ada-ege-pudra",
+    title: "Ada & Ege Pudra Cepli Davetiye",
     category: "Düğün Davetiyeleri",
     paper: "Yaldızlı",
     basePrice: 24,
@@ -62,8 +62,8 @@ export const SEED_PRODUCTS: Product[] = [
     stock: true,
   },
   {
-    id: "melike-pleksi",
-    title: "Melike Şeffaf Pleksi",
+    id: "mira-deniz-pleksi",
+    title: "Mira & Deniz Şeffaf Pleksi",
     category: "Şeffaf / Pleksi Davetiyeler",
     paper: "Şeffaf Pleksi",
     basePrice: 48,
@@ -75,8 +75,8 @@ export const SEED_PRODUCTS: Product[] = [
     stock: true,
   },
   {
-    id: "duru-kabartma",
-    title: "Duru Kabartma İnci",
+    id: "eylul-atlas-kabartma",
+    title: "Eylül & Atlas Kabartma İnci",
     category: "Minimalist Serisi",
     paper: "Şeritli",
     basePrice: 29,
@@ -88,8 +88,8 @@ export const SEED_PRODUCTS: Product[] = [
     stock: true,
   },
   {
-    id: "frig-kraft",
-    title: "Frig Kraft Lavanta",
+    id: "lal-aras-kraft",
+    title: "Lal & Aras Kraft Lavanta",
     category: "Nişan & Söz Davetiyeleri",
     paper: "Kraft",
     basePrice: 18,
@@ -127,8 +127,8 @@ export const SEED_PRODUCTS: Product[] = [
     stock: true,
   },
   {
-    id: "prens-sunnet",
-    title: "Küçük Prens Sünnet",
+    id: "ornek-sunnet",
+    title: "Örnek Sünnet Davetiyesi",
     category: "Sünnet Davetiyeleri",
     paper: "Şeritli",
     basePrice: 16,
@@ -140,8 +140,8 @@ export const SEED_PRODUCTS: Product[] = [
     stock: true,
   },
   {
-    id: "kemer-fildisi",
-    title: "Gizem Kemer Fildişi",
+    id: "mira-atlas-kemer",
+    title: "Mira & Atlas Kemer Fildişi",
     category: "Lüks & Mühürlü Davetiyeler",
     paper: "Mühürlü",
     basePrice: 44,

@@ -56,12 +56,12 @@ export function Customizer() {
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <Field label="Gelin Adı *"><input className={inp} value={p.bride} maxLength={24} onChange={(e) => set("bride", e.target.value)} placeholder="Gizem" /></Field>
-              <Field label="Damat Adı *"><input className={inp} value={p.groom} maxLength={24} onChange={(e) => set("groom", e.target.value)} placeholder="Furkan" /></Field>
+              <Field label="Gelin Adı *"><input className={inp} value={p.bride} maxLength={24} onChange={(e) => set("bride", e.target.value)} placeholder="Ada" /></Field>
+              <Field label="Damat Adı *"><input className={inp} value={p.groom} maxLength={24} onChange={(e) => set("groom", e.target.value)} placeholder="Ege" /></Field>
               <Field label="Tarih *"><input type="date" className={inp} value={p.date} onChange={(e) => set("date", e.target.value)} /></Field>
               <Field label="Saat"><input type="time" className={inp} value={p.time} onChange={(e) => set("time", e.target.value)} /></Field>
             </div>
-            <Field label="Mekân *"><input className={inp} value={p.venue} maxLength={60} onChange={(e) => set("venue", e.target.value)} placeholder="Botanik Balo ve Düğün Salonu, Ankara" /></Field>
+            <Field label="Mekân *"><input className={inp} value={p.venue} maxLength={60} onChange={(e) => set("venue", e.target.value)} placeholder="Örnek Davet Alanı, Kadıköy / İstanbul" /></Field>
             <Field label="Davet Notu"><textarea className={cn(inp, "h-20 resize-none py-2")} maxLength={140} value={p.message} onChange={(e) => set("message", e.target.value)} placeholder="Bu özel günümüzde sizleri de aramızda görmekten mutluluk duyarız." /></Field>
 
             <div className="grid grid-cols-2 gap-4">

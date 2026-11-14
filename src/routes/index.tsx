@@ -12,10 +12,10 @@ import { SiteFooter } from "@/components/shop/SiteFooter";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Koala Davetiye | Düğün, Nişan & Pleksi Davetiye – Ankara" },
-      { name: "description", content: "Mühürlü, pleksi, kraft ve yaldızlı davetiyeler. Canlı önizleme, grafik onayı ve kapıda ödeme." },
-      { property: "og:title", content: "Koala Davetiye – Unutulmaz Davetiye Tasarımları" },
-      { property: "og:description", content: "İsimlerinizi canlı önizleyin, kapıda ödeyin. Türkiye'nin her yerine kargo." },
+      { title: "Mühür Dijital Davetiye — Düğün, Nişan & Özel Gün" },
+      { name: "description", content: "Düğün, nişan ve özel günler için kurgusal dijital davetiye demo vitrini." },
+      { property: "og:title", content: "Mühür Dijital Davetiye — Düğün, Nişan & Özel Gün" },
+      { property: "og:description", content: "Kurgusal etkinliklerle hazırlanmış dijital davetiye örneklerini keşfedin." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

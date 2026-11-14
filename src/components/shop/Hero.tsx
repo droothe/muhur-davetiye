@@ -21,7 +21,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="eyebrow mb-6">Ankara Davetiye · 2026 Koleksiyonu</p>
+          <p className="eyebrow mb-6">Mühür Dijital Davetiye · Örnek Koleksiyon</p>
           <h1 className="text-5xl leading-[1.02] md:text-7xl">
             Hayatınızın En Özel Daveti İçin{" "}
             <em className="text-gradient-gold font-serif italic">Unutulmaz</em> Tasarımlar
@@ -54,8 +54,8 @@ export function Hero() {
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             className="absolute -bottom-5 -left-4 rounded-2xl bg-paper px-5 py-4 shadow-soft md:-left-10"
           >
-            <p className="font-script text-3xl text-gold">46,6 B</p>
-            <p className="text-xs text-muted-foreground">mutlu çift bizi takip ediyor</p>
+            <p className="font-script text-3xl text-gold">Örnek</p>
+            <p className="text-xs text-muted-foreground">kurgusal etkinlik davetiyesi</p>
           </motion.div>
         </motion.div>
       </div>

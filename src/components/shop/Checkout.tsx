@@ -14,7 +14,7 @@ const inp = "h-10 w-full rounded-xl border bg-paper px-3 text-sm outline-none fo
 export function Checkout() {
   const { checkoutOpen, setCheckoutOpen } = useUI();
   const { cart, placeOrder } = useStore();
-  const [form, setForm] = useState({ name: "", phone: "", email: "", city: "Ankara", address: "" });
+  const [form, setForm] = useState({ name: "", phone: "", email: "", city: "İstanbul", address: "" });
   const [payment, setPayment] = useState<Order["payment"]>("Kapıda Ödeme");
   const [done, setDone] = useState<Order | null>(null);
   const subtotal = cartSubtotal(cart);
@@ -46,11 +46,11 @@ export function Checkout() {
               <DialogDescription>Bilgilerinizi girin, siparişinizi önizleyin.</DialogDescription>
               <input className={inp} placeholder="Ad Soyad" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
               <div className="grid grid-cols-2 gap-3">
-                <input className={inp} placeholder="Telefon (05xx…)" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
-                <input className={inp} placeholder="E-posta" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+                <input className={inp} placeholder="Telefon (+90 555 000 00 00)" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
+                <input className={inp} placeholder="E-posta (ornek@muhurdavetiye.example)" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
               </div>
               <input className={inp} placeholder="Şehir" value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} />
-              <textarea className={cn(inp, "h-20 resize-none py-2")} placeholder="Açık adres" value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} />
+              <textarea className={cn(inp, "h-20 resize-none py-2")} placeholder="Örnek Mahallesi, Demo Sokak No: 0, Kadıköy / İstanbul" value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} />
               <p className="pt-2 text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">Ödeme Yöntemi</p>
               <div className="grid grid-cols-3 gap-2">
                 {PAYMENTS.map((p) => (

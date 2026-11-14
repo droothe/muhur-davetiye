@@ -17,8 +17,8 @@ export function SiteHeader() {
       </div>
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-4 md:px-8">
         <Link to="/" className="shrink-0 leading-none">
-          <span className="block font-serif text-2xl tracking-[0.25em] md:text-[1.7rem]">KOALA</span>
-          <span className="block text-[9px] tracking-[0.55em] text-gold">DAVETİYE</span>
+          <span className="block font-serif text-2xl tracking-[0.12em] md:text-[1.7rem]">MÜHÜR</span>
+          <span className="block text-[8px] tracking-[0.25em] text-gold">DİJİTAL DAVETİYE</span>
         </Link>
 
         <div className="relative mx-auto hidden w-full max-w-md md:block">

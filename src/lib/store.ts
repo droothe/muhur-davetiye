@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { SEED_PRODUCTS, type Product } from "./catalog";
-import { lineTotal, type ExtraKey, type QuantityTier } from "./pricing";
+import { lineTotal, shippingFor, type ExtraKey, type QuantityTier } from "./pricing";
 
 export type Personalization = {
   bride: string;
@@ -38,6 +38,48 @@ export type Order = {
   status: OrderStatus;
 };
 
+const demoSubtotal = lineTotal(24, 250);
+const demoShipping = shippingFor(demoSubtotal);
+const DEMO_ORDERS: Order[] = [
+  {
+    id: "MD-DEMO-001",
+    createdAt: "2026-11-10T10:00:00.000Z",
+    customer: {
+      name: "Demo Müşteri",
+      phone: "+90 555 000 00 00",
+      email: "iletisim@muhurdavetiye.example",
+      city: "İstanbul",
+      address: "Örnek Mahallesi, Demo Sokak No: 0, Kadıköy / İstanbul",
+    },
+    payment: "Kapıda Ödeme",
+    items: [
+      {
+        key: "md-demo-item-001",
+        productId: "ada-ege-pudra",
+        title: "Ada & Ege Pudra Cepli Davetiye",
+        image: SEED_PRODUCTS[0].image,
+        basePrice: 24,
+        qty: 250,
+        extras: [],
+        personalization: {
+          bride: "Ada",
+          groom: "Ege",
+          date: "2027-05-22",
+          time: "19:00",
+          venue: "Örnek Davet Alanı, Kadıköy / İstanbul",
+          message: "Bu özel günümüzde sizleri de aramızda görmekten mutluluk duyarız.",
+          font: "script",
+          ink: "gold",
+        },
+      },
+    ],
+    subtotal: demoSubtotal,
+    shipping: demoShipping,
+    total: demoSubtotal + demoShipping,
+    status: "Grafik Onayı Bekliyor",
+  },
+];
+
 type State = {
   products: Product[];
   cart: CartItem[];
@@ -65,7 +107,7 @@ export const useStore = create<State>()(
       products: SEED_PRODUCTS,
       cart: [],
       favorites: [],
-      orders: [],
+      orders: DEMO_ORDERS,
       cartOpen: false,
       search: "",
       setSearch: (search) => set({ search }),
@@ -85,7 +127,7 @@ export const useStore = create<State>()(
       placeOrder: (o) => {
         const order: Order = {
           ...o,
-          id: "KD" + Math.floor(100000 + Math.random() * 900000),
+          id: "MD" + Math.floor(100000 + Math.random() * 900000),
           createdAt: new Date().toISOString(),
           status: "Grafik Onayı Bekliyor",
         };
@@ -104,7 +146,7 @@ export const useStore = create<State>()(
       resetProducts: () => set({ products: SEED_PRODUCTS }),
     }),
     {
-      name: "koala-davetiye",
+      name: "muhur-dijital-davetiye",
       skipHydration: true,
       partialize: (s) => ({
         products: s.products,
